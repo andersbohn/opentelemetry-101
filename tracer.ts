@@ -25,7 +25,7 @@ function start(serviceName: string) {
     const meter = meterProvider.getMeter('my-service-meter');
 
     const traceExporter = new OTLPTraceExporter({
-        url: 'http://jaeger:4318/v1/traces',
+        url: 'http://collector:4318/v1/traces',
     });
 
     const sdk = new NodeSDK({
